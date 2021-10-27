@@ -18,14 +18,14 @@ namespace LoginDers1_2
         public bool MailGonder(string konu, string icerik)
         {
             MailMessage ePosta = new MailMessage();
-            ePosta.From = new MailAddress("ufukemreyuceturk@hotmail.com");
+            ePosta.From = new MailAddress("YOUR_EMAIL");
             ePosta.To.Add(textBox1.Text); //göndereceğimiz mail adresi
 
             ePosta.Subject = konu; //mail konusu
             ePosta.Body = icerik; //mail içeriği 
 
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("ufukemreyuceturk@hotmail.com", "SIFRE");
+            client.Credentials = new System.Net.NetworkCredential("YOUR_EMAIL", "SIFRE");
             client.Port = 587;
             client.Host = "smtp.outlook.com";
             client.EnableSsl = true;
